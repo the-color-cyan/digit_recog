@@ -45,7 +45,8 @@ class Network(object):
             """Update weights and biases by applying gradient descent w/
             backpropogation to a single mini-batch.
 
-            mini_batch is a list of tuples (x, y) and eta is the learning rate."""
+            mini_batch is a list of tuples (x, y) and eta is the learning rate.
+            """
             nabla_b = [np.zeros(b.shape) for b in self.biases]
             nabla_w = [np.zeros(w.shape) for w in self.weights]
             for x, y in mini_batch:
@@ -75,7 +76,7 @@ class Network(object):
                 activations.append(activation)
             # backward pass
             delta = self.cost_derivative(activations[-1], y) * \
-                                          sigmoid_prime(zs[-1])
+                sigmoid_prime(zs[-1])
 
 
 # Helper functions
