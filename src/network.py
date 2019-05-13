@@ -80,6 +80,10 @@ class Network(object):
 
 # Helper functions
 
-# sigmoid function
 def sigmoid(z):
+    """Sigmoid function"""
     return 1.0/(1.0 + np.exp(-z))
+
+def sigmoid_prime(z):
+    """Derivative of sigmoid function"""
+    return sigmoid(z) * (1 - sigmoid(z))
