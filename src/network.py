@@ -16,6 +16,7 @@ class Network(object):
             a = sigmoid(np.dot(w, a) + b)
         return a
 
+
 # Helper functions
 # sigmoid function
 def sigmoid(z):
